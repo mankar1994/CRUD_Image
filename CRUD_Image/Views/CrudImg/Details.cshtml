@@ -1,0 +1,51 @@
+﻿@model CRUD_Image.Models.tbl_img
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_img</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Productname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productimage)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.Productimage)"/>
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
